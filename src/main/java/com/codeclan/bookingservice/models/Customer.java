@@ -23,7 +23,7 @@ public class Customer {
 
     //ONE TO MANY:
     @OneToMany(mappedBy = "customer")
-//    @JsonIgnoreProperties({"customer"})
+    @JsonIgnoreProperties({"customer"})
     private List<Booking> bookings;
 
     //CONSTRUCTOR:
