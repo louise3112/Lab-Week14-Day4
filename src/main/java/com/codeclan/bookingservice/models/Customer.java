@@ -1,5 +1,7 @@
 package com.codeclan.bookingservice.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +23,7 @@ public class Customer {
 
     //ONE TO MANY:
     @OneToMany(mappedBy = "customer")
+//    @JsonIgnoreProperties({"customer"})
     private List<Booking> bookings;
 
     //CONSTRUCTOR:
